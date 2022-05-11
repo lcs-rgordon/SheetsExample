@@ -11,6 +11,12 @@ struct TeamListView: View {
     
     // MARK: Stored properties
     
+    // The main list of teams
+    // A derived value; this is connected to the
+    // source of truth on SheetsExampleApp, which
+    // is the app entry point
+    @Binding var teams: [Team]
+
     // Should the add team interface be shown?
     // The source of truth (value is created and stored here)
     @State var isAddTeamViewShowing = false
@@ -20,10 +26,8 @@ struct TeamListView: View {
         
         NavigationView {
             
-            List {
-                Text("Liverpool")
-                Text("Manchester City")
-                Text("Chelsea")
+            List(teams) { currentTeam in
+                Text(currentTeam.name)
             }
             .navigationTitle("Teams")
             .toolbar {
@@ -42,8 +46,10 @@ struct TeamListView: View {
                     
                 }
             }
+            // When "isAddTeamViewShowing" is true, the sheet is presented
             .sheet(isPresented: $isAddTeamViewShowing) {
-                AddTeamView(isAddTeamViewShowing: $isAddTeamViewShowing)
+                AddTeamView(teams: $teams,
+                            isAddTeamViewShowing: $isAddTeamViewShowing)
             }
 
         }
@@ -54,6 +60,6 @@ struct TeamListView: View {
 
 struct TeamListView_Previews: PreviewProvider {
     static var previews: some View {
-        TeamListView()
+        TeamListView(teams: .constant(exampleTeams))
     }
 }
