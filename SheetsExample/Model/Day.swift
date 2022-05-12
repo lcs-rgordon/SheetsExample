@@ -10,31 +10,33 @@ import Foundation
 // Describes who my favourite teams are, on any given day
 struct Day: Identifiable {
     
+    let id = UUID()
+    
     // The day that I decided these are my favourite teams
-    let id: Date
+    let day: Date
     
     // My favourite teams on this day
-    let teams: [Team]
+    var teams: [Team]
 }
 
 // Today's favourite teams
 let now = Date()
-let exampleDayOne = Day(id: now,
+var exampleDayOne = Day(day: now,
                         teams: exampleTeamSetOne)
 
 // Yesterday's favourite teams
 let calendar = Calendar.current
 let oneDayInPast = calendar.date(byAdding: .day, value: -1, to: now) ?? Date()
-let exampleDayTwo = Day(id: oneDayInPast,
+var exampleDayTwo = Day(day: oneDayInPast,
                         teams: exampleTeamSetTwo)
 
 // Favourite teams from two days ago
 let twoDaysInPast = calendar.date(byAdding: .day, value: -2, to: now) ?? Date()
-let exampleDayThree = Day(id: twoDaysInPast,
+var exampleDayThree = Day(day: twoDaysInPast,
                           teams: exampleTeamSetThree)
 
 // List of favourite teams on various days
-let exampleDays = [
+var exampleDays = [
     
     exampleDayOne
     

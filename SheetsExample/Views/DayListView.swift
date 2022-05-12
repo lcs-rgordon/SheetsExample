@@ -37,13 +37,50 @@ struct DayListView: View {
                         
                         // Iterate over the teams for that day
                         ForEach(currentDay.teams) { currentTeam in
+                            
+                            // Show the team name
                             Text(currentTeam.name)
+                                .contextMenu {
+                                    
+                                    // Allow a team to be deleted
+                                    Button(action: {
+                                        
+                                        // Get the current day's position in the day array
+                                        var currentDayPosition = 0
+                                        for (position, day) in days.enumerated()
+                                        where day.id == currentDay.id {
+                                            
+                                            currentDayPosition = position
+                                            
+                                        }
+                                        // What is the day's position?
+                                        print(dump(currentDayPosition))
+                                        
+                                        // Now remove the team from that day's list
+                                        withAnimation {
+
+                                            days[currentDayPosition].teams.removeAll(where: { currentTeamInList in
+                                                currentTeamInList.id == currentTeam.id
+                                            })
+
+                                        }
+
+                                    }, label: {
+                                        
+                                        Label(title: {
+                                            Text("Delete team")
+                                        }, icon: {
+                                            Image(systemName: "trash")
+                                        })
+                                        
+                                    })
+                                }
                         }
                         
                     }, header: {
                         
                         // Title of the section is the date
-                        Text(currentDay.id.asRelativeDateString)
+                        Text(currentDay.day.asRelativeDateString)
                         
                     })
                     
