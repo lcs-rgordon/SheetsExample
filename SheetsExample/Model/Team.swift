@@ -16,13 +16,45 @@ struct Team: Identifiable {
 
 let exampleTeam = Team(id: 1, name: "Liverpool")
 
-let exampleTeams = [
+let exampleTeamSetOne = [
     
     Team(id: 1, name: "Liverpool")
     
     ,
     
     Team(id: 2, name: "Manchester City")
+    
+    ,
+
+    Team(id: 3, name: "Chelsea")
+    
+    ,
+    
+]
+
+let exampleTeamSetTwo = [
+    
+    Team(id: 1, name: "Aston Villa")
+    
+    ,
+    
+    Team(id: 2, name: "West Ham United")
+    
+    ,
+
+    Team(id: 3, name: "Leeds United")
+    
+    ,
+    
+]
+
+let exampleTeamSetThree = [
+    
+    Team(id: 1, name: "Tottenham Hotspur")
+    
+    ,
+    
+    Team(id: 2, name: "Leicester City")
     
     ,
 

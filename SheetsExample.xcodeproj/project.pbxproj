@@ -10,9 +10,11 @@
 		817C2780282BBDBC000E7C30 /* SheetsExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817C277F282BBDBC000E7C30 /* SheetsExampleApp.swift */; };
 		817C2784282BBDBD000E7C30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 817C2783282BBDBD000E7C30 /* Assets.xcassets */; };
 		817C2787282BBDBD000E7C30 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 817C2786282BBDBD000E7C30 /* Preview Assets.xcassets */; };
-		817C2794282BBE5B000E7C30 /* TeamListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817C2793282BBE5B000E7C30 /* TeamListView.swift */; };
+		817C2794282BBE5B000E7C30 /* DayListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817C2793282BBE5B000E7C30 /* DayListView.swift */; };
 		817C2796282BBEF9000E7C30 /* AddTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817C2795282BBEF9000E7C30 /* AddTeamView.swift */; };
 		817C2799282BC15B000E7C30 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817C2798282BC15B000E7C30 /* Team.swift */; };
+		817C279B282D0DC0000E7C30 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817C279A282D0DC0000E7C30 /* Day.swift */; };
+		817C279E282D11D5000E7C30 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817C279D282D11D5000E7C30 /* Date.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,9 +22,11 @@
 		817C277F282BBDBC000E7C30 /* SheetsExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetsExampleApp.swift; sourceTree = "<group>"; };
 		817C2783282BBDBD000E7C30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		817C2786282BBDBD000E7C30 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		817C2793282BBE5B000E7C30 /* TeamListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamListView.swift; sourceTree = "<group>"; };
+		817C2793282BBE5B000E7C30 /* DayListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayListView.swift; sourceTree = "<group>"; };
 		817C2795282BBEF9000E7C30 /* AddTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTeamView.swift; sourceTree = "<group>"; };
 		817C2798282BC15B000E7C30 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		817C279A282D0DC0000E7C30 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		817C279D282D11D5000E7C30 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				817C277F282BBDBC000E7C30 /* SheetsExampleApp.swift */,
+				817C279C282D11C2000E7C30 /* Extensions */,
 				817C2797282BC14E000E7C30 /* Model */,
 				817C278D282BBDC6000E7C30 /* Views */,
 				817C2783282BBDBD000E7C30 /* Assets.xcassets */,
@@ -75,7 +80,7 @@
 		817C278D282BBDC6000E7C30 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				817C2793282BBE5B000E7C30 /* TeamListView.swift */,
+				817C2793282BBE5B000E7C30 /* DayListView.swift */,
 				817C2795282BBEF9000E7C30 /* AddTeamView.swift */,
 			);
 			path = Views;
@@ -85,8 +90,17 @@
 			isa = PBXGroup;
 			children = (
 				817C2798282BC15B000E7C30 /* Team.swift */,
+				817C279A282D0DC0000E7C30 /* Day.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		817C279C282D11C2000E7C30 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				817C279D282D11D5000E7C30 /* Date.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,9 +174,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				817C2799282BC15B000E7C30 /* Team.swift in Sources */,
+				817C279E282D11D5000E7C30 /* Date.swift in Sources */,
 				817C2780282BBDBC000E7C30 /* SheetsExampleApp.swift in Sources */,
 				817C2796282BBEF9000E7C30 /* AddTeamView.swift in Sources */,
-				817C2794282BBE5B000E7C30 /* TeamListView.swift in Sources */,
+				817C279B282D0DC0000E7C30 /* Day.swift in Sources */,
+				817C2794282BBE5B000E7C30 /* DayListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,10 +14,10 @@ struct AddTeamView: View {
     // The main list of teams
     // A derived value; this is connected to the
     // source of truth on SheetsExampleApp, via
-    // TeamListView
+    // DayListView
     @Binding var teams: [Team]
 
-    // A derived value; this is connected to the source of truth on TeamListView
+    // A derived value; this is connected to the source of truth on DayListView
     @Binding var isAddTeamViewShowing: Bool
     
     // The name of the new team
@@ -68,7 +68,7 @@ struct AddTeamView: View {
 
 struct AddTeamView_Previews: PreviewProvider {
     static var previews: some View {
-        AddTeamView(teams: .constant(exampleTeams),
+        AddTeamView(teams: .constant(exampleTeamSetOne),
                     isAddTeamViewShowing: .constant(true))
     }
 }
