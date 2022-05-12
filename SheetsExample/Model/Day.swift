@@ -19,20 +19,29 @@ struct Day: Identifiable {
     var teams: [Team]
 }
 
-// Today's favourite teams
+// Get the calendar for this locale
+let calendar = Calendar.current
+
+// Get today
 let now = Date()
-var exampleDayOne = Day(day: now,
+let startOfToday = calendar.date(bySettingHour: 0,
+                                 minute: 0,
+                                 second: 0,
+                                 of: now)!
+
+// First example is favourite teams from yesterday
+let oneDayInPast = calendar.date(byAdding: .day, value: -1, to: startOfToday) ?? Date()
+var exampleDayOne = Day(day: oneDayInPast,
                         teams: exampleTeamSetOne)
 
-// Yesterday's favourite teams
-let calendar = Calendar.current
-let oneDayInPast = calendar.date(byAdding: .day, value: -1, to: now) ?? Date()
-var exampleDayTwo = Day(day: oneDayInPast,
+// Second example is favourite teams from two day's ago
+let twoDaysInPast = calendar.date(byAdding: .day, value: -2, to: startOfToday) ?? Date()
+var exampleDayTwo = Day(day: twoDaysInPast,
                         teams: exampleTeamSetTwo)
 
-// Favourite teams from two days ago
-let twoDaysInPast = calendar.date(byAdding: .day, value: -2, to: now) ?? Date()
-var exampleDayThree = Day(day: twoDaysInPast,
+// Third example is favourite teams from three day's ago
+let threeDaysInPast = calendar.date(byAdding: .day, value: -3, to: startOfToday) ?? Date()
+var exampleDayThree = Day(day: threeDaysInPast,
                           teams: exampleTeamSetThree)
 
 // List of favourite teams on various days

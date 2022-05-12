@@ -107,8 +107,8 @@ struct DayListView: View {
             }
             // When "isAddTeamViewShowing" is true, the sheet is presented
             .sheet(isPresented: $isAddTeamViewShowing) {
-//                AddTeamView(teams: $teams,
-//                            isAddTeamViewShowing: $isAddTeamViewShowing)
+                AddTeamView(days: $days,
+                            isAddTeamViewShowing: $isAddTeamViewShowing)
             }
 
         }

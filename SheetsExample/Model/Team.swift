@@ -9,24 +9,24 @@ import Foundation
 
 struct Team: Identifiable {
     
-    let id: Int     // Must be unique for each instance of the Team structure
+    let id = UUID()     // Must be unique for each instance of the Team structure
     let name: String
     
 }
 
-let exampleTeam = Team(id: 1, name: "Liverpool")
+let exampleTeam = Team(name: "Liverpool")
 
 var exampleTeamSetOne = [
     
-    Team(id: 1, name: "Liverpool")
+    Team(name: "Liverpool")
     
     ,
     
-    Team(id: 2, name: "Manchester City")
+    Team(name: "Manchester City")
     
     ,
 
-    Team(id: 3, name: "Chelsea")
+    Team(name: "Chelsea")
     
     ,
     
@@ -34,15 +34,15 @@ var exampleTeamSetOne = [
 
 var exampleTeamSetTwo = [
     
-    Team(id: 4, name: "Aston Villa")
+    Team(name: "Aston Villa")
     
     ,
     
-    Team(id: 5, name: "West Ham United")
+    Team(name: "West Ham United")
     
     ,
 
-    Team(id: 6, name: "Leeds United")
+    Team(name: "Leeds United")
     
     ,
     
@@ -50,15 +50,15 @@ var exampleTeamSetTwo = [
 
 var exampleTeamSetThree = [
     
-    Team(id: 7, name: "Tottenham Hotspur")
+    Team(name: "Tottenham Hotspur")
     
     ,
     
-    Team(id: 8, name: "Leicester City")
+    Team(name: "Leicester City")
     
     ,
 
-    Team(id: 9, name: "Chelsea")
+    Team(name: "Chelsea")
     
     ,
     
