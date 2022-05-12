@@ -40,10 +40,11 @@ struct DayListView: View {
                             
                             // Show the team name
                             Text(currentTeam.name)
-                                .contextMenu {
+                                .swipeActions(allowsFullSwipe: false) {
                                     
                                     // Allow a team to be deleted
-                                    Button(action: {
+                                    Button(role: .destructive,
+                                           action: {
                                         
                                         // Get the current day's position in the day array
                                         var currentDayPosition = 0
